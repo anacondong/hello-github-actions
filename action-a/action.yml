@@ -1,17 +1,13 @@
 name: "Hello Actions"
-description: "Greet someone"
-author: "octocat@github.com"
+description: "Greet Anacondong"
+author: "westkitseo@github.com"
 
 inputs:
   MY_NAME:
-    description: "Who to greet"
+    description: "Who to greet from worklows (config param)"
     required: true
     default: "World"
 
 runs:
   using: "docker"
   image: "Dockerfile"
-
-branding:
-  icon: "mic"
-  color: "purple"
