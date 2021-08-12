@@ -1,0 +1,11 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "simple.js",
+  "scripts": {
+    "test": "node simple.js"
+  },
+  "author": "westkitseo@gmail.com",
+  "license": "ISC"
+}
