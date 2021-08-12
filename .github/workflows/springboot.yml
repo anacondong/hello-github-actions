@@ -134,10 +134,8 @@ jobs:
           id: docker_build
           uses: docker/build-push-action@v2
           with:
-            context: .
-            file: ./Dockerfile
             push: true
-            tags: latest
+            tags: anacondong/springboot:latest
 
 
 # #Deploy's artifact to AWS job >>> https://aws.plainenglish.io/hands-on-ci-cd-for-spring-boot-applications-using-github-actions-and-aws-1cbc1e2c9d54
