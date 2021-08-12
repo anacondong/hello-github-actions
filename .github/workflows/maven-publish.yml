@@ -34,6 +34,8 @@ jobs:
       run: mvn clean --file ./pom.xml
     - name: Test with Maven
       run: mvn test --file ./pom.xml
+    - name: Instell with Maven
+      run: mvn install --file ./pom.xml
 
     # - name: Publish to GitHub Packages Apache Maven
     #   run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
