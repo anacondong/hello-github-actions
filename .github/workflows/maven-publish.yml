@@ -11,6 +11,11 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./maven
+
     permissions:
       contents: read
       packages: write
@@ -26,9 +31,9 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
     
     - name: Clean with Maven
-      run: mvn clean --file pom.xml
+      run: mvn clean --file ./pom.xml
     - name: Test with Maven
-      run: mvn test --file pom.xml
+      run: mvn test --file ./pom.xml
 
     # - name: Publish to GitHub Packages Apache Maven
     #   run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
