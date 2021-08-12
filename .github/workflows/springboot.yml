@@ -136,10 +136,10 @@ jobs:
           name: Build and push Docker image
           uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
           with:
-            context: .
+            context: ./springboot
             push: true
-            tags: ${{ steps.meta.outputs.tags }}
-            labels: ${{ steps.meta.outputs.labels }}
+            tags: latest
+            labels: anacondong/springboot
 
 
 # #Deploy's artifact to AWS job >>> https://aws.plainenglish.io/hands-on-ci-cd-for-spring-boot-applications-using-github-actions-and-aws-1cbc1e2c9d54
