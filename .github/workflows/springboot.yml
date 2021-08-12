@@ -131,6 +131,7 @@ jobs:
             password: ${{ secrets.DOCKERHUB_TOKEN }}
         - 
           name: report file info
+          shell: bash
           run: |
             pwd
             ls -la
