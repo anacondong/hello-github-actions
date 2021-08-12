@@ -133,9 +133,8 @@ jobs:
           name: report file info
           shell: bash
           run: |
-            pwd
-            ls -la
-            echo "Dockerfile = `cat Dockerfile`"
+            echo "Dockerfile = `pwd`"
+            echo "Dockerfile = `ls -la`"
         -
           name: Build and push
           id: docker_build
