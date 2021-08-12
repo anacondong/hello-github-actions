@@ -129,6 +129,12 @@ jobs:
           with:
             username: ${{ secrets.DOCKERHUB_USERNAME }}
             password: ${{ secrets.DOCKERHUB_TOKEN }}
+        - 
+          name: report file info
+          run: |
+            pwd
+            ls -la
+            echo "Dockerfile = `cat Dockerfile`"
         -
           name: Build and push
           id: docker_build
