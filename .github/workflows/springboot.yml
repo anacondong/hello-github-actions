@@ -149,7 +149,7 @@ jobs:
           run: docker build -t anacondong/springboot ${{ github.workspace }}/springboot/
 
         - name: docker tag
-          run: docker tag springboot anacondong/springboot:latest
+          run: docker tag anacondong/springboot anacondong/springboot:latest
 
         - name: docker push
           run: docker push anacondong/springboot:latest
