@@ -81,6 +81,10 @@ jobs:
     name: build_artifact
     #Run on Ubuntu using the latest version
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./springboot
     steps:
       #Check-out your repository under $GITHUB_WORKSPACE, so your workflow can access it
       - uses: actions/checkout@v1
