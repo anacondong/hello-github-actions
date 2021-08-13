@@ -133,18 +133,15 @@ jobs:
         - name: list directory
           run: ls
 
-        - name: Build and push
-          id: docker_build
-          uses: docker/build-push-action@v2
-          with:
-            context: ./
-            file: ./Dockerfile
-            push: true
-            tags: ${{ secrets.DOCKERHUB_USERNAME }}/springboot:latest
+        - name: docker build
+          run: docker build -t anacondong/springboot .
 
-        - name: Image digest
-          run: echo ${{ steps.docker_build.outputs.digest }}
+        - name: docker tag
+          run: docker tag springboot anacondong/springboot:latest
 
+        - name: docker push
+          run: docker push anacondong/springboot:latest
+          
 
 #  username: ${{ secrets.DOCKERHUB_USERNAME }}
 # password: ${{ secrets.DOCKERHUB_TOKEN }}
