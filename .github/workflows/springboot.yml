@@ -103,7 +103,7 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       #Build the application using Maven
       - name: Build with Maven
-        run: mvn install -DskipTests --file springboot/pom.xml
+        run: mvn install -DskipTests --file pom.xml
       - name: list directory
         run: ls
       #Build the application using Maven
