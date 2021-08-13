@@ -142,10 +142,10 @@ jobs:
             name: artifact
             
         - name: Display structure of downloaded files
-          run: ls -R ${{ github.workspace }}/springboot/
+          run: ls -R ${{ github.workspace }}
 
         - name: docker build
-          run: docker build -t anacondong/springboot ${{ github.workspace }}/springboot/
+          run: docker build -t anacondong/springboot ${{ github.workspace }}/
 
         - name: docker tag
           run: docker tag springboot anacondong/springboot:latest
