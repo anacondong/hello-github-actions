@@ -140,12 +140,13 @@ jobs:
         - uses: actions/download-artifact@v2
           with:
             name: artifact
+            path: ${{ github.workspace }}/springboot/target
             
         - name: Display structure of downloaded files
           run: ls -R ${{ github.workspace }}
 
         - name: docker build
-          run: docker build -t anacondong/springboot ${{ github.workspace }}/
+          run: docker build -t anacondong/springboot ${{ github.workspace }}/springboot/
 
         - name: docker tag
           run: docker tag springboot anacondong/springboot:latest
