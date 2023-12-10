@@ -13,13 +13,34 @@ cd springboot
 docker build -t anacondong/springboot .
 
 to be deploy locally:
+<<<<<<< HEAD
 cd ./k8s
 kubectl apply -f service.yml
 kubectl apply -f deployment.yml
 kubectl get service springboot-api-service
+=======
+
+cd ./k8s
+
+kubectl apply -f service.yml
+
+kubectl apply -f deployment.yml
+
+kubectl port-forward <pod-name> 8080:8080
+
+http:localhost:8080/
+
+
+kubectl get service springboot-api-service
+
+>>>>>>> 9a539cb6641232c981a99bd33e6cc4d45dc0e01d
 kubectl cluster-info
 
 http://<<cluster-info-ip>>:<<service-PORT>>
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9a539cb6641232c981a99bd33e6cc4d45dc0e01d
 Cools
