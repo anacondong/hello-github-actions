@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  springboot:
+    image: anacondong/springboot
+    environment:
+      - ENV=local
+      # Uncomment to remote debug
+      - JAVA_TOOL_OPTIONS="-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:8044"
+    ports:
+      - 8080:8080
+      - 8044:8044
